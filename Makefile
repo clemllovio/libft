@@ -4,7 +4,7 @@ CC = gcc
 
 FLAG = -Wall -Werror -Wextra
 
-SRC =
+SRC = $(wildcard.c)
 
 all : $(NAME)
 $(NAME) :

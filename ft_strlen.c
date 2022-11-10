@@ -6,14 +6,14 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:39:35 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/08 13:52:50 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/10 13:37:14 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int  ft_strlen(const char *s)
+unsigned int    ft_strlen(const char *s)
 {
     unsigned int i;
-
+    
     i = 0;
     while (s[i] != '\0')
         i++;
