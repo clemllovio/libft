@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 08:22:51 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/11 10:10:37 by cllovio          ###   ########.fr       */
+/*   Created: 2022/11/11 08:35:21 by cllovio           #+#    #+#             */
+/*   Updated: 2022/11/11 16:37:30 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	character;
+	char character;
+	int i;
 
-	character = (unsigned char) c;
-	if (character >= 'a' && character <= 'z')
-	{
-		character = character - 32;
-	}
-	return (character);
+	character = (char) c;
+	i = 0;
+	while (s[i] != character && s[i])
+		i++;
+	if (s[i] == character)
+		return((char *) &s[i]);
+	return(0);
 }

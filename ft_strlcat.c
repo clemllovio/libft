@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:27:32 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/09 16:05:30 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/11 10:10:39 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,4 @@ unsigned int ft_strlcat(char *dest, const char *src, unsigned int destsize)
     if (destsize > 0 && ft_strlen(dest) > destsize)
         dest[i] = '\0';
     return (ft_strlen(src) + ft_strlen(dest));
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-    char dest[15] = "azertysd";
-    const char src[7] = "qwerty";
-    
-    printf("%lu\n%s", strlcat(dest, src, 0), dest);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:57:42 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/08 15:23:16 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/11 10:10:41 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,4 @@ unsigned int ft_strlcpy(char *dest, const char *src, unsigned int destsize)
         return (ft_strlen(src));
     }
     return (0);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-    char dest[7] = "azerty";
-    const char src[7] = "qwerty";
-    
-    printf("%u\n%s", ft_strlcpy(dest, src, 7), dest);
 }

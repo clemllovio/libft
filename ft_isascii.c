@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:09:53 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/07 15:10:20 by cllovio          ###   ########lyon.fr   */
+/*   Updated: 2022/11/11 10:10:45 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,4 @@ int ft_isascii(int c)
         return (1);
     else
         return (0);
-}
-
-# include <stdio.h>
-
-int main(void)
-{
-    printf("%d", ft_isascii('é'));
 }

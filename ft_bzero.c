@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:28:05 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/09 15:53:26 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/11 10:10:42 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,3 @@ void ft_bzero(void *s, unsigned int n)
         i++;
     }
 }
-
-#include <stdio.h>
-#include <string.h>
-
-int main()
-{
-    char str[] = "almost every programmer should know memset!";
-    ft_bzero (str, 10);
-    puts (str);
-    return 0;
-}
-
