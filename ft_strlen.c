@@ -6,16 +6,18 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:39:35 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/10 13:37:14 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/12 11:13:19 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int    ft_strlen(const char *s)
+#include "libft.h"
+
+unsigned int	ft_strlen(const char *s)
 {
-    unsigned int i;
-    
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

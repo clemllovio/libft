@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 08:33:32 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/11 10:10:35 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/12 12:06:59 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
 	unsigned char	character;
 
