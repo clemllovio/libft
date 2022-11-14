@@ -6,32 +6,47 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:27:32 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/12 11:13:24 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/14 11:26:15 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, const char *src, unsigned int destsize)
+#include "libft.h"
+
+char	*ft_strncat(char *dest, const char *src, unsigned int nb)
 {
 	unsigned int	i;
-	unsigned int	j;
+	unsigned int	len;
 
 	i = 0;
-	while (dest[i] != '\0')
-		i++;
-	j = 0;
-	if (destsize == 0 || destsize < ft_strlen(dest))
+	len = ft_strlen(dest);
+	while (i < nb && src[i] != '\0')
 	{
-		return (ft_strlen(src) + destsize);
+		dest[len + i] = src[i];
+		i ++;
 	}
-	while (src[j] != '\0' && i < destsize - 1)
+	dest[len + i] = '\0';
+	return (dest);
+}
+
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int dstsize)
+{
+	unsigned int	dsize;
+	unsigned int	ssize;
+
+	dsize = ft_strlen(dest);
+	ssize = ft_strlen(src);
+	if (dsize >= dstsize)
+		return (dstsize + ssize);
+	else if ((dsize + ssize) >= dstsize)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		ft_strncat(dest, src, dstsize - dsize - 1);
+		return (dsize + ssize);
 	}
-	if (destsize > 0 && ft_strlen(dest) > destsize)
-		dest[i] = '\0';
-	return (ft_strlen(src) + ft_strlen(dest));
+	else
+	{
+		ft_strncat(dest, src, ssize);
+		return (dsize + ssize);
+	}	
 }
