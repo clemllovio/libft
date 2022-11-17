@@ -6,7 +6,7 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 11:14:25 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/14 16:20:59 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/17 16:46:01 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 void			ft_bzero(void *s, unsigned int n);
 int				ft_isalnum(int c);
@@ -44,5 +45,13 @@ void			*ft_calloc(size_t count, size_t size);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
+//char			**ft_split(char const *s, char c);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
+char			*ft_itoa(int n);
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

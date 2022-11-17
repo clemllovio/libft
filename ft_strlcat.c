@@ -6,11 +6,9 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:27:32 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/14 11:26:15 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/16 13:44:14 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
@@ -35,6 +33,8 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int dstsize)
 	unsigned int	dsize;
 	unsigned int	ssize;
 
+	if (dstsize == 0 && dest == NULL)
+		return (0);
 	dsize = ft_strlen(dest);
 	ssize = ft_strlen(src);
 	if (dsize >= dstsize)
