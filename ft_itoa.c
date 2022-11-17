@@ -6,7 +6,7 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 15:04:27 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/17 17:58:01 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/17 18:35:45 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,10 @@ int	ft_count(int n)
 		count++;
 	}
 	return (count);
+}
+
+char	*ft_rev_tab(char *s)
+{
 }
 
 char	*ft_itoa(int n)
