@@ -6,7 +6,7 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:49:31 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/17 10:04:40 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/18 14:53:28 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr_b(char const *s, unsigned int start, size_t len)
 {
-	char			*new_s;
-	unsigned int	i;
-	unsigned int	k;
+	char	*new_s;
+	size_t	i;
+	size_t	k;
 
 	if (ft_strlen(&s[start]) > len)
 		new_s = malloc(sizeof(char) * (len + 1));

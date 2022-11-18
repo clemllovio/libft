@@ -6,7 +6,7 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 08:22:51 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/12 11:13:09 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/18 15:53:40 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char	character;
-
-	character = (unsigned char) c;
-	if (character >= 'a' && character <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
-		character = character - 32;
+		c = c - 32;
 	}
-	return (character);
+	return (c);
 }

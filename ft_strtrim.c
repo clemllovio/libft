@@ -6,7 +6,7 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:20:13 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/16 09:40:49 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/18 13:25:55 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,16 +87,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_s[i] = '\0';
 	return (new_s);
 }
-
-/*#include <stdio.h>
-
-int	main()
-{
-	char	*s1;
-	char	*result;
-
-	s1 = "          ";
-	result = ft_strtrim(s1, " ");
-	printf("'%s'\n", result);
-	free(result);
-}*/
