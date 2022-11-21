@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 11:14:25 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/21 15:30:10 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/21 19:01:01 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,10 @@ void		ft_putnbr_fd(int n, int fd);
 //void		ft_lstdelone(t_list *lst, void (*del)(void*));
 //void		ft_lstclear(t_list **lst, void (*del)(void*));
 
-/*typedef struct s_list
+/*typedef struct 		s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;*/
+}					t_list;*/
 
 #endif

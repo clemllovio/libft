@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 15:04:27 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/21 15:44:38 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/21 18:24:11 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(int n)
+static int	ft_count(int n)
 {
 	int	count;
 	int	div;
@@ -32,7 +32,7 @@ int	ft_count(int n)
 	return (count);
 }
 
-char	*ft_rev_tab(char *s)
+static char	*ft_rev_tab(char *s)
 {
 	int	temp;
 	int	i;
@@ -50,17 +50,13 @@ char	*ft_rev_tab(char *s)
 	return (s);
 }
 
-char	*ft_convert(int n)
+static char	*ft_fill_s(char *s, int n)
 {
 	int		i;
 	int		sign;
-	char	*s;
 
 	i = 0;
 	sign = 1;
-	s = malloc(sizeof(char) * (ft_count(n) + 1));
-	if (!s)
-		return (NULL);
 	if (n < 0)
 	{
 		n = n * -1;
@@ -74,15 +70,21 @@ char	*ft_convert(int n)
 	if (sign < 0)
 		s[i++] = '-';
 	s[i] = '\0';
-	ft_rev_tab(s);
-	return (s);
+	return(s);
 }
 
 char	*ft_itoa(int n)
 {
+	char	*s;
+	
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	return (ft_convert(n));
+	s = malloc(sizeof(char) * (ft_count(n) + 1));
+	if (!s)
+		return (NULL);
+	ft_fill_s(s, n);
+	ft_rev_tab(s);
+	return (s);
 }

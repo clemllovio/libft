@@ -39,7 +39,11 @@ ft_putnbr_fd.c\
 ft_putendl_fd.c\
 ft_putstr_fd.c \
 
+SRCS_B = ft_lstnew_bonus.c
+
 OBJS = ${SRCS:.c=.o}
+
+OBJS_B = ${SRCS_B:.c=.o}
 
 RM = rm -f
 
@@ -50,11 +54,14 @@ all : ${NAME}
 ${NAME} : ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
+bonus : ${OBJS} ${OBJS_B}
+	ar rcs ${NAME} ${OBJS} ${OBJS_B}
+
 %.o : %.c ${HEADERS} Makefile
-	$(CC) $(CFLAGS) -c $< -o $@ -I;
+	$(CC) $(CFLAGS) -c $< -o $@;
 
 clean :
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${OBJS_B}
 
 fclean : clean
 	${RM} ${NAME}
