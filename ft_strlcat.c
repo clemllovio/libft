@@ -6,13 +6,13 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:27:32 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/21 14:38:11 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/22 16:26:26 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, const char *src, size_t nb)
+static char	*ft_strncat(char *dest, const char *src, size_t nb)
 {
 	unsigned int	i;
 	unsigned int	len;

@@ -6,13 +6,13 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:20:13 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/18 13:25:55 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/22 16:26:55 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_set(char c, char const *set)
+static int	get_set(char c, char const *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	get_set(char c, char const *set)
 	return (0);
 }
 
-int	get_last_set(char const *s1, char const *set)
+static int	get_last_set(char const *s1, char const *set)
 {
 	int	len;
 
@@ -36,7 +36,7 @@ int	get_last_set(char const *s1, char const *set)
 	return (len);
 }
 
-int	get_first_set(char const *s1, char const *set)
+static int	get_first_set(char const *s1, char const *set)
 {
 	int	i;
 
@@ -46,7 +46,7 @@ int	get_first_set(char const *s1, char const *set)
 	return (i);
 }
 
-int	len_new_s(char const *s1, char const *set)
+static int	len_new_s(char const *s1, char const *set)
 {
 	int	i;
 	int	j;

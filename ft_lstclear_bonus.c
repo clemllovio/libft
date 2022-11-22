@@ -6,21 +6,22 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 11:14:34 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/21 11:45:19 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/22 16:30:10 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-    t_list *temp;
+	t_list	*temp;
 
-    temp = NULL;
-    while (lst)
-    {
-        temp = lst -> next;
-        free(lst);
-        lst = temp
-    }
+	if (!lst || !del)
+		return ;
+	while ((*lst))
+	{
+		temp = *lst;
+		*lst = (*lst)->next;
+		ft_lstdelone(temp, del);
+	}
 }

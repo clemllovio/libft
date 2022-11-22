@@ -6,23 +6,17 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 10:57:59 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/21 11:57:48 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/22 10:07:12 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int len;
-	int i;
-
-	len = ft_lstsize(lst);
-	i = 0;
-	while (i != len)
-	{
+	if (!lst)
+		return (NULL);
+	while (lst -> next)
 		lst = lst -> next;
-		i++;
-	}
 	return (lst);
 }

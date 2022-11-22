@@ -6,13 +6,13 @@
 /*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:49:31 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/18 14:53:28 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/22 16:27:02 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr_b(char const *s, unsigned int start, size_t len)
+static char	*ft_substr_b(char const *s, unsigned int start, size_t len)
 {
 	char	*new_s;
 	size_t	i;

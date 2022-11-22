@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 15:04:27 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/21 18:24:11 by cllovio          ###   ########.fr       */
+/*   Updated: 2022/11/22 15:19:52 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_count(int n)
 {
-	int	count;
-	int	div;
+	int		count;
+	long	div;
 
 	count = 0;
 	div = 1;
@@ -50,7 +50,7 @@ static char	*ft_rev_tab(char *s)
 	return (s);
 }
 
-static char	*ft_fill_s(char *s, int n)
+static char	*ft_convert(char *s, int n)
 {
 	int		i;
 	int		sign;
@@ -70,13 +70,13 @@ static char	*ft_fill_s(char *s, int n)
 	if (sign < 0)
 		s[i++] = '-';
 	s[i] = '\0';
-	return(s);
+	return (s);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*s;
-	
+
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
@@ -84,7 +84,7 @@ char	*ft_itoa(int n)
 	s = malloc(sizeof(char) * (ft_count(n) + 1));
 	if (!s)
 		return (NULL);
-	ft_fill_s(s, n);
+	ft_convert(s, n);
 	ft_rev_tab(s);
 	return (s);
 }

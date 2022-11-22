@@ -1,0 +1,7 @@
+a.out
+libft.a
+*.o
+libft-war-machine/
+libftTester/
+.vscode/
+a.out.dSYM/
