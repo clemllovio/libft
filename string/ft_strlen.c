@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 10:56:18 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/22 09:16:54 by cllovio          ###   ########.fr       */
+/*   Created: 2022/11/08 13:39:35 by cllovio           #+#    #+#             */
+/*   Updated: 2023/03/11 10:39:27 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+size_t	ft_strlen(const char *s)
 {
-	new -> next = *lst;
-	*lst = new;
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

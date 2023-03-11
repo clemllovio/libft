@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 08:35:21 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/12 14:50:41 by cllovio          ###   ########.fr       */
+/*   Created: 2022/11/12 13:06:26 by cllovio           #+#    #+#             */
+/*   Updated: 2023/03/11 10:39:38 by cllovio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	character;
-	int		i;
+	int		len;
+	char	*str;
 
-	character = (char) c;
-	i = 0;
-	while (s[i] != character && s[i])
-		i++;
-	if (s[i] == character)
-		return ((char *) &s[i]);
+	character = (char)c;
+	str = (char *)s;
+	len = ft_strlen(str);
+	while (len >= 0)
+	{
+		if (str[len] == character)
+			return (&str[len]);
+		len--;
+	}
 	if (character == 0)
-		return ((char *) &s[i]);
+		return (&str[ft_strlen(str) + 1]);
 	return (0);
 }
