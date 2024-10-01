@@ -36,5 +36,4 @@ Note: Make sure to free any memory allocated by functions like ft_strdup to avoi
 If you've compiled the library with `make bonus`, you can use additional functions (including linked list operations) by simply including the `libft.h` header.
 
 ## Credits
-Credits
 This project was developed by Clémence Llovio as part of the curriculum at 42 School.
