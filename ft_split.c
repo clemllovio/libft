@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cllovio <cllovio@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:26:17 by cllovio           #+#    #+#             */
-/*   Updated: 2022/11/22 14:56:58 by cllovio          ###   ########.fr       */
+/*   Updated: 2024/10/01 10:27:07 by cllovio          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ static int	ft_count_words(char const *s, char c)
 	{
 		is_valid = 0;
 		while (s[i] && s[i] == c)
-		i++;
+			i++;
 		while (s[i] && s[i] != c)
 		{
 			is_valid = 1;
 			i++;
 		}
 		if ((s[i] == c || s[i] == 0) && is_valid)
-		nb_words++;
+			nb_words++;
 	}
 	return (nb_words);
 }

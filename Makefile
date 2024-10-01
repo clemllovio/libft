@@ -4,23 +4,21 @@
 NAME		=	libft.a
 
 # ---- Directories ---- #
-DIR_STRING	=	string/
-DIR_BONUS	=	bonus/
 DIR_OBJS	=	.objs/
 
 # ---- Files path ---- #
-SRCS		=	${DIR_STRING}ft_strlen.c\
-				${DIR_STRING}ft_strlcpy.c\
-				${DIR_STRING}ft_strlcat.c\
-				${DIR_STRING}ft_strchr.c\
-				${DIR_STRING}ft_strrchr.c\
-				${DIR_STRING}ft_strncmp.c\
-				${DIR_STRING}ft_strnstr.c\
-				${DIR_STRING}ft_strdup.c\
-				${DIR_STRING}ft_strjoin.c\
-				${DIR_STRING}ft_strtrim.c\
-				${DIR_STRING}ft_strmapi.c\
-				${DIR_STRING}ft_striteri.c\
+SRCS		=	ft_strlen.c\
+				ft_strlcpy.c\
+				ft_strlcat.c\
+				ft_strchr.c\
+				ft_strrchr.c\
+				ft_strncmp.c\
+				ft_strnstr.c\
+				ft_strdup.c\
+				ft_strjoin.c\
+				ft_strtrim.c\
+				ft_strmapi.c\
+				ft_striteri.c\
 				\
 				ft_isalpha.c\
 				ft_isdigit.c\
@@ -45,15 +43,15 @@ SRCS		=	${DIR_STRING}ft_strlen.c\
 				ft_putendl_fd.c\
 				ft_putstr_fd.c
 
-SRCS_BONUS	=	${DIR_BONUS}ft_lstnew_bonus.c\
-				${DIR_BONUS}ft_lstadd_front_bonus.c\
-				${DIR_BONUS}ft_lstsize_bonus.c\
-				${DIR_BONUS}ft_lstlast_bonus.c\
-				${DIR_BONUS}ft_lstadd_back_bonus.c\
-				${DIR_BONUS}ft_lstdelone_bonus.c\
-				${DIR_BONUS}ft_lstclear_bonus.c\
-				${DIR_BONUS}ft_lstiter_bonus.c\
-				${DIR_BONUS}ft_lstmap_bonus.c
+SRCS_BONUS	=	ft_lstnew_bonus.c\
+				ft_lstadd_front_bonus.c\
+				ft_lstsize_bonus.c\
+				ft_lstlast_bonus.c\
+				ft_lstadd_back_bonus.c\
+				ft_lstdelone_bonus.c\
+				ft_lstclear_bonus.c\
+				ft_lstiter_bonus.c\
+				ft_lstmap_bonus.c
 
 HEADERS		=	libft.h
 

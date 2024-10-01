@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 11:15:27 by cllovio           #+#    #+#             */
-/*   Updated: 2023/03/11 10:27:20 by cllovio          ###   ########.fr       */
+/*   Created: 2022/11/17 10:06:01 by cllovio           #+#    #+#             */
+/*   Updated: 2024/10/01 10:07:35 by cllovio          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	char	*new_s;
+	int		i;
 
-	if (!(lst))
-		return ;
+	if (!(s))
+		return (NULL);
+	new_s = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!(new_s))
+		return (NULL);
 	i = 0;
-	while (lst)
+	while (s[i])
 	{
-		f(lst -> content);
-		lst = lst -> next;
+		new_s[i] = f(i, s[i]);
+		i++;
 	}
+	new_s[i] = '\0';
+	return (new_s);
 }

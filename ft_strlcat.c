@@ -6,11 +6,11 @@
 /*   By: cllovio <cllovio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:27:32 by cllovio           #+#    #+#             */
-/*   Updated: 2023/03/11 10:39:15 by cllovio          ###   ########.fr       */
+/*   Updated: 2024/10/01 10:21:05 by cllovio          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 static char	*ft_strncat(char *dest, const char *src, size_t nb)
 {
@@ -48,5 +48,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	{
 		ft_strncat(dest, src, ssize);
 		return (dsize + ssize);
-	}	
+	}
 }
