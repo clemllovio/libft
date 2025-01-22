@@ -21,7 +21,7 @@ After compiling, you'll have a `libft.a` static library. To use it in your proje
      ```c
      #include "libft.h"
      ```
-  2. ou can now use any function from libft in your code. For example:
+  2. You can now use any function from libft in your code. For example:
      ```c
      char *str = ft_strdup("Hello, World!");
      int len = ft_strlen(str);
